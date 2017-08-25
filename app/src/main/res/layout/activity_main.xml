@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,6 +19,18 @@
     android:layout_margin="20dp"
     >
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_gravity="center_vertical"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E-Laundry"
+        android:gravity="center"
+        android:textSize="25dp"/>
 
 
     <LinearLayout
@@ -31,6 +53,30 @@
             android:inputType="text"
             android:textSize="20dp"
             android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No HP:"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ketikan nomor HPmu"
+            android:maxLines="1"
+            android:inputType="number"
+            android:textSize="20dp"
+            android:layout_gravity="center"/>
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -59,30 +105,29 @@
                 android:layout_height="wrap_content"
                 android:text="KG"
                 android:textSize="20dp"
-                android:layout_weight="1"
-                />
+                android:layout_weight="1" />
         </LinearLayout>
-
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="5dp">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bedcover"
-            android:textSize="35dp" />
+            android:textSize="25dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:paddingTop="10dp"
             >
             <ImageView
                 android:id="@+id/imageView2"
@@ -117,18 +162,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Selimut"
-            android:textSize="35dp" />
+            android:textSize="25dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
             <ImageView
                 android:layout_width="43dp"
@@ -153,9 +200,80 @@
                 android:src="@mipmap/if_plus_1646001"
                 android:layout_weight="1"/>
         </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:gravity="right"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Besok Jadi"
+        android:textSize="20dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:onClick="RadioButtonClicked"
+        android:id="@+id/BesokJadi"
+        />
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Satu Hari Jadi"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"/>
+
+        <RadioButton
+            android:id="@+id/SatuHariJadi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="RadioButtonClicked"
+            />
+
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"/>
+
+        <RadioButton
+            android:id="@+id/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="RadioButtonClicked"
+            />
+
+
+    </LinearLayout>
 
 
     <LinearLayout
@@ -163,42 +281,35 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <!--<ImageView-->
-        <!--android:id="@+id/imageView"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="center"-->
-        <!--android:layout_weight="2"-->
-        <!--android:src="@mipmap/if_wash_machine_733996" />-->
-
         <LinearLayout
             android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="right"
             android:orientation="vertical"
-            >
+            android:paddingTop="10dp">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Rp.0"
                 android:id="@+id/total"
-                android:textSize="25dp"
+                android:layout_gravity="center"
+                android:textSize="40dp"
                 />
+
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Order"/>
+                android:text="Order"
+                android:textSize="20dp"
+                android:padding="20dp"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
     </LinearLayout>
 
-
-
-
-
-
-
 </LinearLayout>
+    </TableLayout>
+</ScrollView>

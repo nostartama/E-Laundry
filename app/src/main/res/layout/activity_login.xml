@@ -39,7 +39,9 @@
                 android:layout_marginTop="30dp"
                 android:background="#fff"
                 android:hint="Email"
-                android:paddingLeft="15dp" />
+                android:paddingLeft="15dp"
+                android:maxLines="1"
+                />
 
         </LinearLayout>
 
@@ -59,7 +61,8 @@
                 android:background="#fff"
                 android:hint="Phone Number"
                 android:inputType="number"
-                android:paddingLeft="15dp" />
+                android:paddingLeft="15dp"
+                android:maxLines="1"/>
 
         </LinearLayout>
 

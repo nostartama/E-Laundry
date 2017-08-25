@@ -21,27 +21,27 @@
 
 
     <TextView
+        android:id="@+id/email_thx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="User"
-        android:textColor="#ffff"
-        android:textSize="60dp"
-        android:layout_marginTop="0dp"
         android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:text="User"
         android:textAlignment="center"
-        android:id="@+id/email_thx"/>
+        android:textColor="#ffff"
+        android:textSize="60dp" />
 
     <TextView
+        android:id="@+id/biaya_thx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffff"
-        android:text="Phone Number"
-        android:textSize="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Phone Number"
         android:textAlignment="center"
-        android:id="@+id/biaya_thx"/>
+        android:textColor="#ffff"
+        android:textSize="50dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -13,8 +13,8 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    int blankets;
-    int cover;
+    int blanket;
+    int bedcover;
     int total;
     int weight;
     int jadi=0;
@@ -42,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
             i = i + 9;
         }
         weight = i;
-        displayk(weight);
+        displayKilo(weight);
         calculate();
     }}
 
-    public void increaseb(View view) {
-        blankets++;
-        display(blankets);
+    public void increaseBlanket(View view) {
+        blanket++;
+        displayBlanket(blanket);
         calculate();
     }
     public void cekKilat(View view) {
@@ -60,38 +60,38 @@ public class MainActivity extends AppCompatActivity {
     public void calculate() {
 
         if (kilat) {
-            total = (blankets * 10000) + (cover * 8000) + (weight*2 * 4000) + jadi;
+            total = (blanket * 10000) + (bedcover * 8000) + (weight*2 * 4000) + jadi;
         } else {
-            total = (blankets * 10000) + (cover * 8000) + (weight * 4000) + jadi;
+            total = (blanket * 10000) + (bedcover * 8000) + (weight * 4000) + jadi;
         }
        // total = (blankets * 10000) + (cover * 8000) + (weight * 4000) + jadi;
-        displayt(total);
+        displayTotal(total);
     }
 
-    public void decreaseb(View view) {
-        if (blankets > 0) {
-            blankets--;
-            display(blankets);
+    public void decreaseBlanket(View view) {
+        if (blanket > 0) {
+            blanket--;
+            displayBlanket(blanket);
             calculate();
         }
-        display(blankets);
+        displayBlanket(blanket);
         calculate();
     }
 
-    public void increasec(View view) {
-        cover++;
-        displayc(cover);
+    public void increaseBedcover(View view) {
+        bedcover++;
+        displayBedcover(bedcover);
         calculate();
     }
 
-    public void decreasec(View view) {
-        if (cover > 0) {
-            cover--;
-            displayc(cover);
+    public void decreaseBedcover(View view) {
+        if (bedcover > 0) {
+            bedcover--;
+            displayBedcover(bedcover);
 
             calculate();
         }
-        displayc(cover);
+        displayBedcover(bedcover);
 
         calculate();
     }
@@ -109,22 +109,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void display(int number) {
-        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+    private void displayBedcover(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.bedcoverQty);
         quantityTextView.setText("" + number);
     }
 
-    private void displayc(int number) {
-        TextView quantityTextView = (TextView) findViewById(R.id.quantitys_text_view);
+    private void displayBlanket(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.blanketQty);
         quantityTextView.setText("" + number);
     }
 
-    private void displayk(int number) {
+    private void displayKilo(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.kilo);
         quantityTextView.setText("" + number);
     }
 
-    private void displayt(int number) {
+    private void displayTotal(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.total);
         quantityTextView.setText("" +"Rp." + number);
 

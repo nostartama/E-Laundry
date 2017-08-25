@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.tiora.e_laundry.MainActivity"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     >
 
     <ImageView
@@ -24,14 +25,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="Email: "
             android:textSize="25dp"
             android:layout_gravity="center_vertical"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="tuliskan email"
+            android:hint="ketikan emailmu"
             android:layout_gravity="center"/>
     </LinearLayout>
 
@@ -41,20 +42,22 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginLeft=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Berat"
-            android:textSize="35dp" />
+            android:text="Berat:"
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" 15"/>
+            android:text="15"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" KG"/>
+            android:text="KG"/>
     </LinearLayout>
 
     <LinearLayout

@@ -3,6 +3,7 @@ package com.example.tiora.e_laundry;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +11,9 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
 import java.util.Random;
+import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
     int blanket;
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     int total;
     int weight;
     int jadi=0;
+    String Invoice;
     SharedPreferences sharedPreferences;
     public static final String myPreferences = "myPref";
     TextView totall;
@@ -36,16 +40,20 @@ public class MainActivity extends AppCompatActivity {
             totall.setText(sharedPreferences.getString(biaya, ""));
 
 
-        Random kilo = new Random();
-        int i = (kilo.nextInt() % 10) + 1;
-        if (i < 0) {
-            i = i + 9;
-        }
-        weight = i;
-        displayKilo(weight);
-        calculate();
+        randomWeight();
     }}
 
+    public void randomWeight () {
+        Random random = new Random();
+        weight = random.nextInt(10) + 1;
+
+        displayKilo(weight);
+        calculate();
+    }
+
+    public void randomWeightonClick (View view) {
+        randomWeight();
+    }
     public void increaseBlanket(View view) {
         blanket++;
         displayBlanket(blanket);
@@ -55,8 +63,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox BesokJadiBox = (CheckBox) findViewById(R.id.BesokJadi);
         kilat  = BesokJadiBox.isChecked();
         calculate();
-
-    }
+   }
     public void calculate() {
 
         if (kilat) {
@@ -64,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             total = (blanket * 10000) + (bedcover * 8000) + (weight * 4000) + jadi;
         }
-       // total = (blankets * 10000) + (cover * 8000) + (weight * 4000) + jadi;
         displayTotal(total);
     }
 
@@ -96,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         calculate();
     }
 
-    void Order (View view)
+    public void Order (View view)
     {
         String t = totall.getText().toString();
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -106,6 +112,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private String createInvoice() {
+        Invoice = "Email dan phone piye carane";
+        Invoice += "\n" + getString(weight);
+        Invoice += "\n" + getString(bedcover);
+        Invoice += "\n" + getString(blanket);
+        Invoice += "\n Total : " + getString(total);
+        return Invoice;
+    }
 
 
 

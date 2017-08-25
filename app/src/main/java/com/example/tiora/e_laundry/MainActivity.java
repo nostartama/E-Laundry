@@ -3,6 +3,7 @@ package com.example.tiora.e_laundry;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     int cover;
     int total;
     int weight;
+    int jadi=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculate() {
-        total = (blankets * 10000) + (cover * 8000) + (weight * 4000);
+        total = (blankets * 10000) + (cover * 8000) + (weight * 4000) + jadi;
         displayt(total);
     }
 
@@ -66,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
         calculate();
     }
 
+    void RadioButtonClicked (View view)
+    {
+        boolean checked = ((RadioButton) view).isChecked();
+
+    }
+
     private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
@@ -83,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayt(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.total);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText("" +"Rp." + number);
+
     }
 }

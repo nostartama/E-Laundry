@@ -85,6 +85,7 @@
             android:layout_height="wrap_content"
             android:text="Bedcover"
             android:textSize="25dp"
+            android:textStyle="bold"
             android:layout_weight="1"
             android:textAlignment="center"/>
 
@@ -139,6 +140,7 @@
             android:layout_height="wrap_content"
             android:text="Selimut"
             android:textSize="25dp"
+            android:textStyle="bold"
             android:gravity="center"
             android:layout_weight="1.26"/>
 

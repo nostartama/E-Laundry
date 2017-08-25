@@ -87,7 +87,11 @@
             android:layout_weight="1"
             android:textAlignment="center"/>
 
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            >
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="43dp"
@@ -113,6 +117,9 @@
                 android:src="@mipmap/if_plus_1646001"
                 android:layout_weight="1"/>
 
+        </LinearLayout>
+
+
 
 
     </LinearLayout>
@@ -124,15 +131,20 @@
         android:orientation="horizontal"
         android:paddingTop="10dp">
 
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Selimut"
             android:textSize="25dp"
             android:gravity="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1.26"/>
 
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
             <ImageView
                 android:layout_width="43dp"
                 android:layout_height="37dp"
@@ -155,6 +167,8 @@
                 android:onClick="increasec"
                 android:src="@mipmap/if_plus_1646001"
                 android:layout_weight="1"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 

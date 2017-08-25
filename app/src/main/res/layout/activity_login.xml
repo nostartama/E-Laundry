@@ -38,8 +38,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Email"
-            android:textColorHint="@color/White"
-            android:textColor="@color/White"
             android:background="#fff"
             android:paddingLeft="15dp"
             android:layout_marginTop="30dp"
@@ -62,8 +60,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Phone Number"
-            android:textColorHint="@color/White"
-            android:textColor="@color/White"
             android:background="#fff"
             android:paddingLeft="15dp"
             />
@@ -80,8 +76,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Next"
-            android:textColor="@color/White"
-            android:background="@color/YellowGelap"
+
             android:layout_centerInParent="true"/>
 
     </RelativeLayout>

@@ -11,75 +11,71 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@mipmap/logo"
-        android:paddingTop="90dp"
         android:paddingBottom="10dp"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="80dp"
+        android:src="@mipmap/logo"
         />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#ffff">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:orientation="horizontal"
         android:background="#ffff"
-        android:layout_margin="20dp"
-        >
+        android:orientation="vertical">
 
-
-        <EditText
-            android:id="@+id/usernameET"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Email"
-            android:background="#fff"
-            android:paddingLeft="15dp"
-            android:layout_marginTop="30dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:orientation="horizontal"
-        android:background="#ffff"
-        android:layout_margin="20dp">
-
-
-
-        <EditText
-            android:id="@+id/passwordET"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Phone Number"
-            android:background="#fff"
-            android:paddingLeft="15dp"
-            />
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/LogButton"
-            android:layout_marginTop="25dp"
-            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:layout_margin="20dp"
+            android:layout_marginTop="35dp"
+            android:background="#ffff"
+            android:orientation="horizontal">
 
-            android:layout_centerInParent="true"/>
 
-    </RelativeLayout>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="#fff"
+                android:hint="Email"
+                android:paddingLeft="15dp" />
 
-</LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="35dp"
+            android:background="#ffff"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/PhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/NextButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="25dp"
+                android:text="Next"
+                android:onClick="NextButton"/>
+
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

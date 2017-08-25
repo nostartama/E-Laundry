@@ -1,5 +1,8 @@
 package com.example.tiora.e_laundry;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,11 +17,23 @@ public class MainActivity extends AppCompatActivity {
     int total;
     int weight;
     int jadi=0;
+    SharedPreferences sharedPreferences;
+    public static final String myPreferences = "myPref";
+    TextView totall;
+    public static final String biaya = "payKEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        totall = (TextView) findViewById(R.id.total);
+        sharedPreferences = getSharedPreferences(myPreferences, Context.MODE_PRIVATE);
+        if (sharedPreferences.contains(biaya))
+        {
+            totall.setText(sharedPreferences.getString(biaya, ""));
+
+
         Random kilo = new Random();
         int i = (kilo.nextInt() % 10) + 1;
         if (i < 0) {
@@ -27,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         weight = i;
         displayk(weight);
         calculate();
-    }
+    }}
 
     public void increaseb(View view) {
         blankets++;
@@ -68,11 +83,18 @@ public class MainActivity extends AppCompatActivity {
         calculate();
     }
 
-    void RadioButtonClicked (View view)
+    void Order (View view)
     {
-        boolean checked = ((RadioButton) view).isChecked();
-
+        String t = totall.getText().toString();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(biaya, t);
+        editor.commit();
+        Intent intent = new Intent(MainActivity.this, Terimakasih.class);
+        startActivity(intent);
     }
+
+
+
 
     private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);

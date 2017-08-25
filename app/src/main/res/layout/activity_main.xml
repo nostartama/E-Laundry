@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:text="Email: "
             android:textSize="20dp"
+            android:textColor="#fff"
             android:layout_gravity="center_vertical"/>
 
         <EditText
@@ -47,6 +48,8 @@
             android:layout_height="wrap_content"
             android:hint="ketikan emailmu"
             android:maxLines="1"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             android:inputType="text"
             android:textSize="20dp"
             android:layout_gravity="center"/>
@@ -62,6 +65,7 @@
             android:layout_height="wrap_content"
             android:text="No HP:"
             android:textSize="20dp"
+            android:textColor="#fff"
             android:layout_gravity="center_vertical"/>
 
         <EditText
@@ -69,6 +73,8 @@
             android:layout_height="wrap_content"
             android:hint="ketikan nomor HPmu"
             android:maxLines="1"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             android:inputType="number"
             android:textSize="20dp"
             android:layout_gravity="center"/>
@@ -94,6 +100,7 @@
                 android:text="0"
                 android:id="@+id/kilo"
                 android:textSize="50dp"
+                android:textColor="#fff"
                 android:layout_weight="1"
                 android:textAlignment="textEnd"/>
 
@@ -101,6 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="KG"
+                android:textColor="#fff"
                 android:textSize="20dp"
                 android:layout_weight="1" />
         </LinearLayout>

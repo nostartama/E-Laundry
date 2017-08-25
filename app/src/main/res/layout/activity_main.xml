@@ -27,63 +27,19 @@
     >
 
 
+        <ImageView
+            android:layout_width="268dp"
+            android:layout_height="97dp"
+            android:background="@mipmap/logo"
+            android:layout_gravity="center"
+
+            />
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email: "
-            android:textSize="20dp"
-            android:textColor="#fff"
-            android:layout_gravity="center_vertical"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ketikan emailmu"
-            android:maxLines="1"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
-            android:inputType="text"
-            android:textSize="20dp"
-            android:layout_gravity="center"/>
-    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No HP:"
-            android:textSize="20dp"
-            android:textColor="#fff"
-            android:layout_gravity="center_vertical"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ketikan nomor HPmu"
-            android:maxLines="1"
-            android:textColor="#fff"
-            android:textColorHint="#fff"
-            android:inputType="number"
-            android:textSize="20dp"
-            android:layout_gravity="center"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -119,7 +75,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingTop="5dp">
 
 
@@ -127,14 +83,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bedcover"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            >
+
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="43dp"
@@ -159,7 +112,7 @@
                 android:onClick="increaseb"
                 android:src="@mipmap/if_plus_1646001"
                 android:layout_weight="1"/>
-        </LinearLayout>
+
 
 
     </LinearLayout>
@@ -168,20 +121,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Selimut"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_weight="1"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingTop="10dp">
 
             <ImageView
                 android:layout_width="43dp"
@@ -205,7 +155,7 @@
                 android:onClick="increasec"
                 android:src="@mipmap/if_plus_1646001"
                 android:layout_weight="1"/>
-        </LinearLayout>
+
     </LinearLayout>
 
 

@@ -8,13 +8,12 @@
     android:orientation="vertical"
     android:layout_margin="20dp"
     >
-
+    //cobatestpullnihyo
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
         android:layout_gravity="center"
-
         />
 
     <LinearLayout
@@ -42,7 +41,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_marginLeft=""
+            android:layout_marginLeft="10px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Berat:"

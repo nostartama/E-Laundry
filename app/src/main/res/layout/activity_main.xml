@@ -190,11 +190,11 @@
         android:text="Besok Jadi"
         android:textSize="20dp" />
 
-    <RadioButton
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:onClick="RadioButtonClicked"
         android:id="@+id/BesokJadi"
+        android:onClick="cekKilat"
         />
 
 

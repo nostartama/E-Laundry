@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">E-Laundry</string>
+
+    <string name="kilat">KILAT</string>
+    <string name="express">EXPRESS</string>
+    <string name="normal">NORMAL</string>
+
+
+
+
+
 </resources>

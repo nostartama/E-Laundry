@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         kilat = (TextView) findViewById(R.id.kilat);
         normal = (TextView) findViewById(R.id.normal);
         maju = (Button) findViewById(R.id.maju);
-        Ekspress = (TextView) findViewById(R.id.ekspressClick);
+     //   Ekspress = (TextView) findViewById(R.id.ekspressClick);
 
         Typeface face= Typeface.createFromAsset(getAssets(), "font/m-l.ttf");
         Typeface facebold= Typeface.createFromAsset(getAssets(), "font/m-sb.ttf");
@@ -61,11 +61,8 @@ public class MainActivity extends AppCompatActivity {
         selimut.setTypeface(face);
         bedcoverQty.setTypeface(facebold);
         blanketQty.setTypeface(facebold);
-        kilat.setTypeface(face);
         totall.setTypeface(facebold);
-        normal.setTypeface(face);
         maju.setTypeface(face);
-        Ekspress.setTypeface(face);
 
         sharedPreferences = getSharedPreferences(myPreferences, Context.MODE_PRIVATE);
         if (sharedPreferences.contains(biaya))
@@ -76,37 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         }}
 
-    public void onClick(View v) {
-        // do something when the button is clicked
-        // Yes we will handle click here but which button clicked??? We don't know
 
-        // So we will make
-        switch (v.getId() /*to get clicked view id**/) {
-            case R.id.ekspressClick:
-                TextView textView = (TextView)findViewById( R.id.ekspressClick);
-                Spannable spannable = (Spannable)textView.getText();
-                StyleSpan boldSpan = new StyleSpan( Typeface.BOLD );
-                spannable.setSpan( boldSpan, 0, 8, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-                break;
-
-            case R.id.kilat:
-                TextView textView1 = (TextView) findViewById(R.id.kilat);
-                Spannable spannable1 = (Spannable)textView1.getText();
-                StyleSpan boldSpan1 = new StyleSpan( Typeface.BOLD );
-                spannable1.setSpan( boldSpan1, 0, 5, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-                break;
-
-            case R.id.normal:
-                TextView textView2 = (TextView) findViewById(R.id.normal);
-                Spannable spannable2 = (Spannable)textView2.getText();
-                StyleSpan boldSpan2 = new StyleSpan( Typeface.BOLD );
-                spannable2.setSpan( boldSpan2, 0, 6, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-                break;
-
-            default:
-                break;
-        }
-    }
 
 
     public void randomWeight () {

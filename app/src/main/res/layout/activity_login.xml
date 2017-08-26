@@ -76,7 +76,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="24dp"
                 android:text="Next"
                 android:onClick="NextButton"/>
 

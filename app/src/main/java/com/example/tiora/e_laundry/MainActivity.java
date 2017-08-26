@@ -12,6 +12,7 @@ import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.style.StyleSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     int total;
     int weight;
     int jadi=0;
-    TextView Ekspress;
+    TextView Ekspress,kilo,kg,bedcovers,selimut,bedcoverQty,blanketQty,kilat,normal;
+    Button maju;
     String Invoice;
     SharedPreferences sharedPreferences;
     public static final String myPreferences = "myPref";
@@ -38,10 +40,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MainActivity pilih = new MainActivity();
-
         totall = (TextView) findViewById(R.id.total);
+        kilo = (TextView) findViewById(R.id.kilo);
+        kg = (TextView) findViewById(R.id.tv_kg);
+        bedcovers = (TextView) findViewById(R.id.tv_bedcover);
+        selimut = (TextView) findViewById(R.id.tv_selimut);
+        bedcoverQty = (TextView) findViewById(R.id.bedcoverQty);
+        blanketQty = (TextView) findViewById(R.id.blanketQty);
+        kilat = (TextView) findViewById(R.id.kilat);
+        normal = (TextView) findViewById(R.id.normal);
+        maju = (Button) findViewById(R.id.maju);
         Ekspress = (TextView) findViewById(R.id.ekspressClick);
+
+        Typeface face= Typeface.createFromAsset(getAssets(), "font/m-l.ttf");
+        Typeface facebold= Typeface.createFromAsset(getAssets(), "font/m-sb.ttf");
+
+        kilo.setTypeface(facebold);
+        kg.setTypeface(face);
+        bedcovers.setTypeface(face);
+        selimut.setTypeface(face);
+        bedcoverQty.setTypeface(facebold);
+        blanketQty.setTypeface(facebold);
+        kilat.setTypeface(face);
+        totall.setTypeface(facebold);
+        normal.setTypeface(face);
+        maju.setTypeface(face);
+        Ekspress.setTypeface(face);
 
         sharedPreferences = getSharedPreferences(myPreferences, Context.MODE_PRIVATE);
         if (sharedPreferences.contains(biaya))

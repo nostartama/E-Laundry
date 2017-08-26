@@ -9,15 +9,16 @@
     android:background="#4842b7">
 
     <TextView
+        android:id="@+id/tv_hi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="70dp"
         android:text="Hi!"
         android:textColor="#ffff"
         android:textSize="40dp"
-        android:textStyle="italic"
-        android:fontFamily="sans-serif-condensed"
-        android:paddingLeft="70dp"
-        android:layout_marginTop="20dp" />
+        android:textStyle="italic" />
 
 
     <TextView
@@ -73,21 +74,21 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_currently"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Currently"
             android:textSize="25dp"
-            android:layout_marginLeft="20dp"
-            android:textStyle="italic"
-            />
+            android:textStyle="italic" />
 
         <TextView
+            android:id="@+id/tv_washing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Washing..."
-            android:textSize="60dp"
             android:textAlignment="center"
-            />
+            android:textSize="60dp" />
 
     </LinearLayout>
 

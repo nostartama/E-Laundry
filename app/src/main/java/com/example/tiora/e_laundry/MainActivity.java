@@ -3,9 +3,14 @@ package com.example.tiora.e_laundry;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
@@ -21,27 +26,64 @@ public class MainActivity extends AppCompatActivity {
     int total;
     int weight;
     int jadi=0;
+    TextView Ekspress;
     String Invoice;
     SharedPreferences sharedPreferences;
     public static final String myPreferences = "myPref";
     TextView totall;
     public static final String biaya = "payKEY";
-    boolean kilat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MainActivity pilih = new MainActivity();
+
         totall = (TextView) findViewById(R.id.total);
+        Ekspress = (TextView) findViewById(R.id.ekspressClick);
+
         sharedPreferences = getSharedPreferences(myPreferences, Context.MODE_PRIVATE);
         if (sharedPreferences.contains(biaya))
         {
             totall.setText(sharedPreferences.getString(biaya, ""));
-
-
         randomWeight();
-    }}
+
+
+        }}
+
+    public void onClick(View v) {
+        // do something when the button is clicked
+        // Yes we will handle click here but which button clicked??? We don't know
+
+        // So we will make
+        switch (v.getId() /*to get clicked view id**/) {
+            case R.id.ekspressClick:
+                TextView textView = (TextView)findViewById( R.id.ekspressClick);
+                Spannable spannable = (Spannable)textView.getText();
+                StyleSpan boldSpan = new StyleSpan( Typeface.BOLD );
+                spannable.setSpan( boldSpan, 0, 8, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                break;
+
+            case R.id.kilat:
+                TextView textView1 = (TextView) findViewById(R.id.kilat);
+                Spannable spannable1 = (Spannable)textView1.getText();
+                StyleSpan boldSpan1 = new StyleSpan( Typeface.BOLD );
+                spannable1.setSpan( boldSpan1, 0, 5, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                break;
+
+            case R.id.normal:
+                TextView textView2 = (TextView) findViewById(R.id.normal);
+                Spannable spannable2 = (Spannable)textView2.getText();
+                StyleSpan boldSpan2 = new StyleSpan( Typeface.BOLD );
+                spannable2.setSpan( boldSpan2, 0, 6, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                break;
+
+            default:
+                break;
+        }
+    }
+
 
     public void randomWeight () {
         Random random = new Random();
@@ -59,16 +101,10 @@ public class MainActivity extends AppCompatActivity {
         displayBlanket(blanket);
         calculate();
     }
-    public void cekKilat(View view) {
-        CheckBox BesokJadiBox = (CheckBox) findViewById(R.id.BesokJadi);
-        kilat  = BesokJadiBox.isChecked();
-        calculate();
-   }
+
     public void calculate() {
 
-        if (kilat) {
-            total = (blanket * 10000) + (bedcover * 8000) + (weight*2 * 4000) + jadi;
-        } else {
+        {
             total = (blanket * 10000) + (bedcover * 8000) + (weight * 4000) + jadi;
         }
         displayTotal(total);

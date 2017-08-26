@@ -86,7 +86,6 @@
             android:layout_height="wrap_content"
             android:text="Bedcover"
             android:textSize="25dp"
-            android:textStyle="bold"
             android:layout_weight="1"
             android:textAlignment="center"/>
 
@@ -141,7 +140,6 @@
             android:layout_height="wrap_content"
             android:text="Selimut"
             android:textSize="25dp"
-            android:textStyle="bold"
             android:gravity="center"
             android:layout_weight="1.26"/>
 
@@ -185,18 +183,38 @@
         android:gravity="right"
     android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Besok Jadi"
-        android:textSize="20dp" />
+        <TextView
+            android:id="@+id/kilat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Kilat"
+            android:textSize="20dp"
+            android:onClick="onClick"
+            android:bufferType="spannable"
+            />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/BesokJadi"
-        android:onClick="cekKilat"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ekspress"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:id="@+id/ekspressClick"
+            android:bufferType="spannable" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:id="@+id/normal"
+            android:bufferType="spannable"/>
 
 
 </LinearLayout>
